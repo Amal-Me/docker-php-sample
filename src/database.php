@@ -14,7 +14,7 @@ $db_pass = trim(file_get_contents($password_file_path));
 // Create a new PDO instance
 $db_handle = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
 
-// Create the "messages" table if it doesn't ex ist
+// Create the "messages" table if it doesn't exist
 $db_handle->exec("
  CREATE TABLE IF NOT EXISTS messages (
      id INT AUTO_INCREMENT PRIMARY KEY,
